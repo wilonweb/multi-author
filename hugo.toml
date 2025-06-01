@@ -1,0 +1,11 @@
+baseURL = 'https://wilonweb.github.io/6-starter-hugo-blowfishhugo/'
+languageCode = 'fr-fr'
+title = 'Mon blog'
+theme = 'blowfish'
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  disableFingerprinting = true
+  disableSRI = true
