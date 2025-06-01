@@ -1,4 +1,4 @@
-baseURL = 'https://wilonweb.github.io/6-starter-hugo-blowfishhugo/'
+baseURL = 'https://wilonweb.github.io/multi-author/'
 languageCode = 'fr-fr'
 title = 'Mon blog'
 theme = 'blowfish'
