@@ -1,6 +1,6 @@
-# 🚀 Générer un nouveau blog avec Hugo + Blowfish + GitHub Pages
+# 🚀 Multi Author
 
-Ce dépôt est un **template prêt à l’emploi** pour créer un site statique avec [Hugo](https://gohugo.io/) et le thème [Blowfish](https://blowfish.page/), automatiquement déployé sur **GitHub Pages**.
+L'idée de ce repo est d'utiiliser le template pour en faire un site multi author et documenter le process
 
 ---
 
