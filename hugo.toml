@@ -1,7 +1,7 @@
 baseURL = 'https://wilonweb.github.io/multi-author/'
-languageCode = 'fr-fr'
-title = 'Mon blog'
+title = "ClubCode"
 theme = 'blowfish'
+defaultContentLanguage = "fr"
 
 [params]
   defaultTheme = "auto"
@@ -9,3 +9,30 @@ theme = 'blowfish'
   ShowPostNavLinks = true
   disableFingerprinting = true
   disableSRI = true
+
+[languages]
+  [languages.fr]
+    languageName = "Français"
+    weight = 1
+
+  [languages.es]
+    languageName = "Español"
+    weight = 2
+
+  [languages.he]
+    languageName = "עברית"
+    weight = 3
+    [languages.he.params]
+      rtl = true
+
+  [languages.ar]
+    languageName = "العربية"
+    weight = 4
+    [languages.ar.params]
+      rtl = true
+
+  [languages.fa]
+    languageName = "فارسی"
+    weight = 5
+    [languages.fa.params]
+      rtl = true

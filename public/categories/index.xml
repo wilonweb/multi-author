@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Mon blog</title>
-    <link>http://localhost:1313/6-starter-hugo-blowfishhugo/categories/</link>
-    <description>Recent content in Categories on Mon blog</description>
+    <title>Categories on ClubCode</title>
+    <link>http://localhost:1313/multi-author/categories/</link>
+    <description>Recent content in Categories on ClubCode</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr-fr</language>
+    <language>fr</language>
     <copyright>© 2025 </copyright>
-    <atom:link href="http://localhost:1313/6-starter-hugo-blowfishhugo/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/multi-author/categories/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

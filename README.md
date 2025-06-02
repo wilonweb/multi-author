@@ -2,47 +2,23 @@
 
 L'idée de ce repo est d'utiiliser le template pour en faire un site multi author et documenter le process
 
----
+On vas gegalement faire en sorte qu'il y est des batch pour automatiser le fait qu'il y est tel ou tel congig. 
 
-## 🧪 Étapes pour créer un nouveau blog
-
-### 1. 📄 Créer un nouveau repo avec ce template
-
-- Clique sur le bouton **"Use this template"** (en haut à droite sur GitHub)
-- Choisis un **nom de repo** (ex : `mon-blog`)
-- Assure-toi qu’il est **public**
-- Valide
+On vas prendre pour exemple Les pilotes de l'IT 
 
 ---
 
-### 2. ⚙️ Activer GitHub Pages
+## Ce qu'on a fait
+Creation du dossier batch 
+pour avoir plein de module en bash pour 
+set title : modifie le titre
 
-- Va dans `Settings` → `Pages`
-- Dans **Build and Deployment**, choisis :
-  - Source : `GitHub Actions`
-- C’est tout. GitHub Pages va attendre le workflow.
 
----
+Pour voir la liste des articles 
+http://localhost:1313/multi-author/fr/posts/
 
-### 3. 🛠️ Modifier `hugo.toml`
 
-Avant de déployer en local, édite le fichier `hugo.toml` :
 
-```toml
-baseURL = 'https://<ton-user>.github.io/<nouveau-repo>/'
-languageCode = 'fr-fr'
-title = 'Mon blog'
-theme = 'blowfish'
+## Question 
 
-[params]
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowPostNavLinks = true
-```
-
-exemple 
-pages : https://wilonweb.github.io/test-template/
-code : https://github.com/wilonweb/test-template
-
-## TODO 
-Deployer test-template en local
+Comment automatiser le fait de définir le titre du site. 

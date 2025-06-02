@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ClubCode</title>
+    <link>http://localhost:1313/multi-author/fr/</link>
+    <description>Recent content on ClubCode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <copyright>© 2025 </copyright>
+    <lastBuildDate>Mon, 02 Jun 2025 01:19:53 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/fr/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bienvenue (fr)</title>
+      <link>http://localhost:1313/multi-author/fr/bienvenue/</link>
+      <pubDate>Mon, 02 Jun 2025 01:15:19 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/fr/bienvenue/</guid>
+      <description>&lt;p&gt;Bonjour Wil, tu as réussi.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

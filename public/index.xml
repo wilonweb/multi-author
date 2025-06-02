@@ -1,13 +1,113 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mon blog</title>
-    <link>http://localhost:1313/6-starter-hugo-blowfishhugo/</link>
-    <description>Recent content on Mon blog</description>
+    <title>ClubCode</title>
+    <link>http://localhost:1313/multi-author/</link>
+    <description>Recent content on ClubCode</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr-fr</language>
+    <language>fr</language>
     <copyright>© 2025 </copyright>
-    <atom:link href="http://localhost:1313/6-starter-hugo-blowfishhugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jun 2025 01:32:01 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mon Test (ar)</title>
+      <link>http://localhost:1313/multi-author/ar/posts/mon-test/</link>
+      <pubDate>Mon, 02 Jun 2025 01:32:01 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/ar/posts/mon-test/</guid>
+      <description>&lt;p&gt;مرحبا ويل، لقد نجحت.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Mon Test (es)</title>
+      <link>http://localhost:1313/multi-author/es/posts/mon-test/</link>
+      <pubDate>Mon, 02 Jun 2025 01:32:01 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/es/posts/mon-test/</guid>
+      <description>&lt;p&gt;Hola Wil, lo lograste.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Mon Test (fa)</title>
+      <link>http://localhost:1313/multi-author/fa/posts/mon-test/</link>
+      <pubDate>Mon, 02 Jun 2025 01:32:01 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/fa/posts/mon-test/</guid>
+      <description>&lt;p&gt;سلام ویل، موفق شدی.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Mon Test (he)</title>
+      <link>http://localhost:1313/multi-author/he/posts/mon-test/</link>
+      <pubDate>Mon, 02 Jun 2025 01:32:01 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/he/posts/mon-test/</guid>
+      <description>&lt;p&gt;שלום ויל, הצלחת.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Mon Test</title>
+      <link>http://localhost:1313/multi-author/fr/posts/mon-test/</link>
+      <pubDate>Mon, 02 Jun 2025 01:19:53 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/fr/posts/mon-test/</guid>
+      <description>&lt;p&gt;ceci est un test&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Bienvenue (fr)</title>
+      <link>http://localhost:1313/multi-author/fr/bienvenue/</link>
+      <pubDate>Mon, 02 Jun 2025 01:15:19 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/fr/bienvenue/</guid>
+      <description>&lt;p&gt;Bonjour Wil, tu as réussi.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Bienvenue (fa)</title>
+      <link>http://localhost:1313/multi-author/fa/bienvenue/</link>
+      <pubDate>Mon, 02 Jun 2025 01:14:58 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/fa/bienvenue/</guid>
+      <description>&lt;p&gt;سلام ویل، موفق شدی.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Bienvenue (ar)</title>
+      <link>http://localhost:1313/multi-author/ar/bienvenue/</link>
+      <pubDate>Mon, 02 Jun 2025 01:14:57 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/ar/bienvenue/</guid>
+      <description>&lt;p&gt;مرحبا ويل، لقد نجحت.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Bienvenue (es)</title>
+      <link>http://localhost:1313/multi-author/es/bienvenue/</link>
+      <pubDate>Mon, 02 Jun 2025 01:14:57 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/es/bienvenue/</guid>
+      <description>&lt;p&gt;Hola Wil, lo lograste.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Bienvenue (he)</title>
+      <link>http://localhost:1313/multi-author/he/bienvenue/</link>
+      <pubDate>Mon, 02 Jun 2025 01:14:57 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/he/bienvenue/</guid>
+      <description>&lt;p&gt;שלום ויל, הצלחת.&lt;/p&gt;</description>
+      
+    </item>
     
   </channel>
 </rss>
