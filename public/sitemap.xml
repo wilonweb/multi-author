@@ -9,27 +9,12 @@
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:1313/multi-author/languages/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
     <loc>http://localhost:1313/multi-author/es/sitemap.xml</loc>
     
   </sitemap>
   
   <sitemap>
-    <loc>http://localhost:1313/multi-author/he/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
     <loc>http://localhost:1313/multi-author/ar/sitemap.xml</loc>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://localhost:1313/multi-author/fa/sitemap.xml</loc>
     
   </sitemap>
   

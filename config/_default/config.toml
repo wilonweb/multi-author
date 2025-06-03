@@ -1,4 +1,0 @@
-baseURL = "https://wilonweb.github.io/multi-author/"
-defaultContentLanguage = "fr"
-defaultContentLanguageInSubdir = true
-theme = "blowfish"

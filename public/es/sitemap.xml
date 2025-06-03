@@ -11,23 +11,8 @@
     />
     <xhtml:link
       rel="alternate"
-      hreflang="he"
-      href="http://localhost:1313/multi-author/he/"
-    />
-    <xhtml:link
-      rel="alternate"
       hreflang="ar"
       href="http://localhost:1313/multi-author/ar/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="fa"
-      href="http://localhost:1313/multi-author/fa/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="languages"
-      href="http://localhost:1313/multi-author/languages/"
     />
     <xhtml:link
       rel="alternate"

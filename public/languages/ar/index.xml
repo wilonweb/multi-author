@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bienvenue (ar) on </title>
+    <link>http://localhost:1313/multi-author/languages/ar/</link>
+    <description>Recent content in Bienvenue (ar) on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>languages</language>
+    <copyright>© 2025 </copyright>
+    <lastBuildDate>Mon, 02 Jun 2025 01:32:01 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/languages/ar/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bienvenue (ar)</title>
+      <link>http://localhost:1313/multi-author/languages/ar/bienvenue/</link>
+      <pubDate>Mon, 02 Jun 2025 01:14:57 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/languages/ar/bienvenue/</guid>
+      <description>&lt;p&gt;مرحبا ويل، لقد نجحت.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Salam</title>
+      <link>http://localhost:1313/multi-author/languages/ar/salam/</link>
+      <pubDate>Mon, 02 Jun 2025 01:00:02 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/languages/ar/salam/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
