@@ -3,16 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/multi-author/</loc>
+    <loc>http://localhost:1313/multi-author/en/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="http://localhost:1313/multi-author/fr/"
+      href="http://localhost:1313/multi-author/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/multi-author/"
+      href="http://localhost:1313/multi-author/en/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/multi-author/en/categories/</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/multi-author/categories/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/multi-author/en/categories/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/multi-author/en/tags/</loc>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/multi-author/tags/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/multi-author/en/tags/"
     />
   </url>
 </urlset>

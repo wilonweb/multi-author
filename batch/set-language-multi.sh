@@ -12,73 +12,104 @@ if [ ! -f "$config_file" ]; then
   exit 1
 fi
 
-# 🧹 Supprime les anciennes définitions multilingues
+# 🧹 Nettoie l'ancien config.toml (en retirant les anciens blocs multilingues)
 grep -v 'defaultContentLanguage' "$config_file" \
   | grep -v '^\[languages' \
   | grep -v '^  \[languages\.' \
-  | grep -v 'languageName' \
-  | grep -v 'weight =' \
-  | grep -v 'contentDir =' \
   > "$tmp_file"
 
-# ✏️ Ajoute le bloc multilingue à la suite
-cat >> "$tmp_file" <<EOL
+# ✏️ Ajoute la nouvelle configuration multilingue
+cat >> "$tmp_file" <<'EOL'
 
 defaultContentLanguage = "fr"
 
 [languages]
+
   [languages.fr]
     languageName = "Français"
     contentDir = "content/fr"
     weight = 1
+    [languages.fr.params]
+      displayName = "Français"
+    [languages.fr.menus]
+      [[languages.fr.menus.main]]
+        name = "Accueil"
+        pageRef = "/"
+        weight = 1
+      [[languages.fr.menus.main]]
+        name = "Articles"
+        pageRef = "/posts/"
+        weight = 2
 
   [languages.es]
     languageName = "Español"
     contentDir = "content/es"
     weight = 2
+    [languages.es.params]
+      displayName = "Español"
+    [languages.es.menus]
+      [[languages.es.menus.main]]
+        name = "Inicio"
+        pageRef = "/"
+        weight = 1
+      [[languages.es.menus.main]]
+        name = "Artículos"
+        pageRef = "/posts/"
+        weight = 2
 
   [languages.he]
     languageName = "עברית"
     contentDir = "content/he"
     weight = 3
     [languages.he.params]
+      displayName = "עברית"
       rtl = true
+    [languages.he.menus]
+      [[languages.he.menus.main]]
+        name = "דף הבית"
+        pageRef = "/"
+        weight = 1
+      [[languages.he.menus.main]]
+        name = "מאמרים"
+        pageRef = "/posts/"
+        weight = 2
 
   [languages.ar]
     languageName = "العربية"
     contentDir = "content/ar"
     weight = 4
     [languages.ar.params]
+      displayName = "العربية"
       rtl = true
+    [languages.ar.menus]
+      [[languages.ar.menus.main]]
+        name = "الرئيسية"
+        pageRef = "/"
+        weight = 1
+      [[languages.ar.menus.main]]
+        name = "مقالات"
+        pageRef = "/posts/"
+        weight = 2
 
   [languages.fa]
     languageName = "فارسی"
     contentDir = "content/fa"
     weight = 5
     [languages.fa.params]
+      displayName = "فارسی"
       rtl = true
+    [languages.fa.menus]
+      [[languages.fa.menus.main]]
+        name = "خانه"
+        pageRef = "/"
+        weight = 1
+      [[languages.fa.menus.main]]
+        name = "مقالات"
+        pageRef = "/posts/"
+        weight = 2
 EOL
 
-# 💾 Sauvegarde le nouveau hugo.toml
+# 💾 Remplace le fichier hugo.toml par le nouveau
 mv "$tmp_file" "$config_file"
 
-# 📁 Génère les fichiers _index.md pour chaque langue si manquants
-for lang in fr es he ar fa; do
-  content_path="$PROJECT_DIR/content/$lang/_index.md"
-  if [ ! -f "$content_path" ]; then
-    mkdir -p "$(dirname "$content_path")"
-    cat > "$content_path" <<EOF
----
-title: "Bienvenue (${lang})"
-description: "Page d'accueil en ${lang}"
----
-EOF
-    echo "✅ Créé : $content_path"
-  else
-    echo "⚠️ Déjà existant : $content_path"
-  fi
-done
-
-echo ""
-echo "✅ Fichier hugo.toml mis à jour avec 5 langues"
-echo "🌍 Fichiers _index.md créés pour chaque langue"
+echo "✅ Fichier hugo.toml mis à jour avec menus, displayName et paramètres multilingues complets."
