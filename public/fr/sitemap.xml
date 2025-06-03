@@ -3,44 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/multi-author/fr/ar/posts/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/es/posts/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/fa/posts/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/he/posts/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/ar/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/es/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/fa/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/he/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
+    <loc>http://localhost:1313/multi-author/</loc>
+    <lastmod>2025-06-03T13:54:44+01:00</lastmod>
     <xhtml:link
       rel="alternate"
       hreflang="es"
       href="http://localhost:1313/multi-author/es/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="he"
+      href="http://localhost:1313/multi-author/he/"
     />
     <xhtml:link
       rel="alternate"
@@ -49,64 +22,71 @@
     />
     <xhtml:link
       rel="alternate"
+      hreflang="fa"
+      href="http://localhost:1313/multi-author/fa/"
+    />
+    <xhtml:link
+      rel="alternate"
       hreflang="fr"
-      href="http://localhost:1313/multi-author/fr/"
+      href="http://localhost:1313/multi-author/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/multi-author/fr/ar/posts/mon-test/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
+    <loc>http://localhost:1313/multi-author/posts/</loc>
+    <lastmod>2025-06-03T13:54:44+01:00</lastmod>
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="http://localhost:1313/multi-author/es/posts/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="he"
+      href="http://localhost:1313/multi-author/he/posts/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="http://localhost:1313/multi-author/ar/posts/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fa"
+      href="http://localhost:1313/multi-author/fa/posts/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/multi-author/posts/"
+    />
   </url>
   <url>
-    <loc>http://localhost:1313/multi-author/fr/es/posts/mon-test/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/fa/posts/mon-test/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/he/posts/mon-test/</loc>
-    <lastmod>2025-06-02T01:32:01+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/fr/</loc>
-    <lastmod>2025-06-02T01:19:53+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/fr/posts/</loc>
-    <lastmod>2025-06-02T01:19:53+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/fr/posts/mon-test/</loc>
-    <lastmod>2025-06-02T01:19:53+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/fr/bienvenue/</loc>
-    <lastmod>2025-06-02T01:15:19+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/fa/bienvenue/</loc>
-    <lastmod>2025-06-02T01:14:58+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/ar/bienvenue/</loc>
-    <lastmod>2025-06-02T01:14:57+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/es/bienvenue/</loc>
-    <lastmod>2025-06-02T01:14:57+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/he/bienvenue/</loc>
-    <lastmod>2025-06-02T01:14:57+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/es/hola/</loc>
-    <lastmod>2025-06-02T01:00:02+01:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/fr/ar/salam/</loc>
-    <lastmod>2025-06-02T01:00:02+01:00</lastmod>
+    <loc>http://localhost:1313/multi-author/posts/mon-test/</loc>
+    <lastmod>2025-06-03T13:54:44+01:00</lastmod>
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="http://localhost:1313/multi-author/es/posts/mon-test/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="he"
+      href="http://localhost:1313/multi-author/he/posts/mon-test/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="http://localhost:1313/multi-author/ar/posts/mon-test/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fa"
+      href="http://localhost:1313/multi-author/fa/posts/mon-test/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/multi-author/posts/mon-test/"
+    />
   </url>
 </urlset>

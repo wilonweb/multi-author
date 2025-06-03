@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Accueil (fr) on ClubCode</title>
-    <link>http://localhost:1313/multi-author/</link>
-    <description>Recent content in Accueil (fr) on ClubCode</description>
+    <title>Articles on ClubCode</title>
+    <link>http://localhost:1313/multi-author/posts/</link>
+    <description>Recent content in Articles on ClubCode</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <copyright>© 2025 </copyright>
-    <lastBuildDate>Tue, 03 Jun 2025 13:54:44 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jun 2025 13:54:44 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Mon Test (fr)</title>

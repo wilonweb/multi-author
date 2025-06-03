@@ -5,14 +5,14 @@
     <link>http://localhost:1313/multi-author/es/posts/</link>
     <description>Recent content in Articles on ClubCode</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr</language>
+    <language>es</language>
     <copyright>© 2025 </copyright>
-    <lastBuildDate>Mon, 02 Jun 2025 01:32:01 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jun 2025 13:54:44 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/es/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Mon Test (es)</title>
       <link>http://localhost:1313/multi-author/es/posts/mon-test/</link>
-      <pubDate>Mon, 02 Jun 2025 01:32:01 +0100</pubDate>
+      <pubDate>Tue, 03 Jun 2025 13:54:44 +0100</pubDate>
       
       <guid>http://localhost:1313/multi-author/es/posts/mon-test/</guid>
       <description>&lt;p&gt;Hola Wil, lo lograste.&lt;/p&gt;</description>

@@ -1,0 +1,97 @@
+baseURL = "https://wilonweb.github.io/multi-author/"
+title = "ClubCode"
+theme = "blowfish"
+defaultContentLanguage = "fr"
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  disableFingerprinting = true
+  disableSRI = true
+  ShowLanguageSwitcher = true
+
+[languages]
+
+  [languages.fr]
+    languageName = "Français"
+    contentDir = "content/fr"
+    weight = 1
+    [languages.fr.params]
+      displayName = "Français"
+    [languages.fr.menus]
+      [[languages.fr.menus.main]]
+        name = "Accueil"
+        pageRef = "/"
+        weight = 1
+      [[languages.fr.menus.main]]
+        name = "Articles"
+        pageRef = "/posts/"
+        weight = 2
+
+  [languages.es]
+    languageName = "Español"
+    contentDir = "content/es"
+    weight = 2
+    [languages.es.params]
+      displayName = "Español"
+    [languages.es.menus]
+      [[languages.es.menus.main]]
+        name = "Inicio"
+        pageRef = "/"
+        weight = 1
+      [[languages.es.menus.main]]
+        name = "Artículos"
+        pageRef = "/posts/"
+        weight = 2
+
+  [languages.he]
+    languageName = "עברית"
+    contentDir = "content/he"
+    weight = 3
+    [languages.he.params]
+      displayName = "עברית"
+      rtl = true
+    [languages.he.menus]
+      [[languages.he.menus.main]]
+        name = "דף הבית"
+        pageRef = "/"
+        weight = 1
+      [[languages.he.menus.main]]
+        name = "מאמרים"
+        pageRef = "/posts/"
+        weight = 2
+
+  [languages.ar]
+    languageName = "العربية"
+    contentDir = "content/ar"
+    weight = 4
+    [languages.ar.params]
+      displayName = "العربية"
+      rtl = true
+    [languages.ar.menus]
+      [[languages.ar.menus.main]]
+        name = "الرئيسية"
+        pageRef = "/"
+        weight = 1
+      [[languages.ar.menus.main]]
+        name = "مقالات"
+        pageRef = "/posts/"
+        weight = 2
+
+  [languages.fa]
+    languageName = "فارسی"
+    contentDir = "content/fa"
+    weight = 5
+    [languages.fa.params]
+      displayName = "فارسی"
+      rtl = true
+    [languages.fa.menus]
+      [[languages.fa.menus.main]]
+        name = "خانه"
+        pageRef = "/"
+        weight = 1
+      [[languages.fa.menus.main]]
+        name = "مقالات"
+        pageRef = "/posts/"
+        weight = 2
