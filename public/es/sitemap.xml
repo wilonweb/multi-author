@@ -3,31 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:56088/multi-author/es/</loc>
+    <loc>http://localhost:1313/multi-author/es/</loc>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="http://localhost:56088/multi-author/fr/"
+      href="http://localhost:1313/multi-author/fr/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="he"
-      href="http://localhost:56088/multi-author/he/"
+      href="http://localhost:1313/multi-author/he/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="ar"
-      href="http://localhost:56088/multi-author/ar/"
+      href="http://localhost:1313/multi-author/ar/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="fa"
-      href="http://localhost:56088/multi-author/fa/"
+      href="http://localhost:1313/multi-author/fa/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="languages"
+      href="http://localhost:1313/multi-author/languages/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="es"
-      href="http://localhost:56088/multi-author/es/"
+      href="http://localhost:1313/multi-author/es/"
     />
   </url>
 </urlset>

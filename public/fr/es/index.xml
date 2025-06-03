@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bienvenue (es) on ClubCode</title>
-    <link>http://localhost:56088/multi-author/fr/es/</link>
+    <link>http://localhost:1313/multi-author/fr/es/</link>
     <description>Recent content in Bienvenue (es) on ClubCode</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <copyright>© 2025 </copyright>
-    <lastBuildDate>Mon, 02 Jun 2025 01:32:01 +0100</lastBuildDate><atom:link href="http://localhost:56088/multi-author/fr/es/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jun 2025 01:32:01 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/fr/es/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bienvenue (es)</title>
-      <link>http://localhost:56088/multi-author/fr/es/bienvenue/</link>
+      <link>http://localhost:1313/multi-author/fr/es/bienvenue/</link>
       <pubDate>Mon, 02 Jun 2025 01:14:57 +0100</pubDate>
       
-      <guid>http://localhost:56088/multi-author/fr/es/bienvenue/</guid>
+      <guid>http://localhost:1313/multi-author/fr/es/bienvenue/</guid>
       <description>&lt;p&gt;Hola Wil, lo lograste.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Hola</title>
-      <link>http://localhost:56088/multi-author/fr/es/hola/</link>
+      <link>http://localhost:1313/multi-author/fr/es/hola/</link>
       <pubDate>Mon, 02 Jun 2025 01:00:02 +0100</pubDate>
       
-      <guid>http://localhost:56088/multi-author/fr/es/hola/</guid>
+      <guid>http://localhost:1313/multi-author/fr/es/hola/</guid>
       <description></description>
       
     </item>

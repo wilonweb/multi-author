@@ -1,0 +1,9 @@
+[[main]]
+name = "Accueil"
+pageRef = "/"
+weight = 1
+
+[[main]]
+name = "Articles"
+pageRef = "/posts/"
+weight = 2

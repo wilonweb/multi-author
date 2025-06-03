@@ -1,0 +1,14 @@
+[languages.fr]
+languageName = "Français"
+weight = 1
+
+[languages.es]
+languageName = "Español"
+weight = 2
+
+[languages.ar]
+languageName = "العربية"
+weight = 3
+
+[languages.ar.params]
+rtl = true
