@@ -109,5 +109,25 @@
       
     </item>
     
+    <item>
+      <title>Hola</title>
+      <link>http://localhost:1313/multi-author/es/hola/</link>
+      <pubDate>Mon, 02 Jun 2025 01:00:02 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/es/hola/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Salam</title>
+      <link>http://localhost:1313/multi-author/ar/salam/</link>
+      <pubDate>Mon, 02 Jun 2025 01:00:02 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/ar/salam/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>

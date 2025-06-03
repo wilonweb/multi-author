@@ -2,6 +2,7 @@ baseURL = 'https://wilonweb.github.io/multi-author/'
 title = "ClubCode"
 theme = 'blowfish'
 defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = true
 
 [params]
   defaultTheme = "auto"
@@ -9,6 +10,7 @@ defaultContentLanguage = "fr"
   ShowPostNavLinks = true
   disableFingerprinting = true
   disableSRI = true
+  ShowLanguageSwitcher = true
 
 [languages]
   [languages.fr]
