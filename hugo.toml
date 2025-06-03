@@ -2,6 +2,8 @@ baseURL = "https://wilonweb.github.io/multi-author/"
 title = "ClubCode"
 theme = "blowfish"
 
+defaultContentLanguage = "fr"
+
 [params]
   defaultTheme = "auto"
   ShowReadingTime = true
@@ -9,8 +11,6 @@ theme = "blowfish"
   disableFingerprinting = true
   disableSRI = true
   ShowLanguageSwitcher = true
-
-defaultContentLanguage = "fr"
 
 [languages]
 
@@ -20,6 +20,7 @@ defaultContentLanguage = "fr"
     weight = 1
     [languages.fr.params]
       displayName = "Français"
+      description = "ClubCode : Apprends à coder facilement."
     [languages.fr.menus]
       [[languages.fr.menus.main]]
         name = "Accueil"
@@ -68,6 +69,7 @@ defaultContentLanguage = "fr"
     contentDir = "content/ar"
     weight = 4
     [languages.ar.params]
+slogan = "dsdsds"
       displayName = "العربية"
       rtl = true
     [languages.ar.menus]
@@ -96,3 +98,4 @@ defaultContentLanguage = "fr"
         name = "مقالات"
         pageRef = "/posts/"
         weight = 2
+

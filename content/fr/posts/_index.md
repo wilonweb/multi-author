@@ -1,4 +1,5 @@
 ---
-title: "Articles"
-layout: list
+title: "Bienvenue sur ClubCode"
+layout: page
 ---
+

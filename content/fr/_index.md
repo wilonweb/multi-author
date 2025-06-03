@@ -1,4 +1,6 @@
 ---
-title: "Accueil (fr)"
-description: "Page d'accueil en fr"
+title: "Bienvenue sur ClubCode"
+layout: page
 ---
+
+{{< slogan >}}
