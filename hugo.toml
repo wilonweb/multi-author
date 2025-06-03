@@ -18,16 +18,21 @@ defaultContentLanguageInSubdir = true
 [languages.fr]
 languageName = "Français"
 weight = 1
+[languages.fr.params]
+displayName = "Français"
 
 [languages.es]
 languageName = "Español"
 weight = 2
+[languages.es.params]
+displayName = "Español"
 
 [languages.ar]
 languageName = "العربية"
 weight = 3
 [languages.ar.params]
 rtl = true
+displayName = "العربية"
 
 [[menu.main]]
 name = "Accueil"
