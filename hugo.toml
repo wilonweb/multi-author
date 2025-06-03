@@ -1,4 +1,4 @@
-baseURL = "https://wilonweb.github.io/multi-author/"
+baseURL = ""
 languageCode = "fr"
 title = "ClubCode"
 theme = "blowfish"
@@ -17,7 +17,17 @@ defaultContentLanguageInSubdir = true
 
 [languages.fr]
 languageName = "Français"
+contentDir = "content/fr"
 weight = 1
+[languages.fr.menus]
+      [[languages.fr.menus.main]]
+        name = 'Accueil'
+        pageRef = '/'
+        weight = 1
+      [[languages.fr.menus.main]]
+        name = 'Articles'
+        pageRef = '/posts/'
+        weight = 2
 [languages.fr.params]
 displayName = "Français"
 
@@ -33,13 +43,3 @@ weight = 3
 [languages.ar.params]
 rtl = true
 displayName = "العربية"
-
-[[menu.main]]
-name = "Accueil"
-pageRef = "/"
-weight = 1
-
-[[menu.main]]
-name = "Articles"
-pageRef = "/posts/"
-weight = 2
