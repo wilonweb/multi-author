@@ -3,37 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/multi-author/he/posts/</loc>
-    <lastmod>2025-06-03T13:54:44+01:00</lastmod>
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="http://localhost:1313/multi-author/posts/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="es"
-      href="http://localhost:1313/multi-author/es/posts/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="ar"
-      href="http://localhost:1313/multi-author/ar/posts/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="fa"
-      href="http://localhost:1313/multi-author/fa/posts/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="he"
-      href="http://localhost:1313/multi-author/he/posts/"
-    />
-  </url>
-  <url>
     <loc>http://localhost:1313/multi-author/he/</loc>
-    <lastmod>2025-06-03T13:54:44+01:00</lastmod>
+    <lastmod>2025-06-08T01:43:29+01:00</lastmod>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
@@ -56,8 +27,66 @@
     />
     <xhtml:link
       rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/multi-author/en/"
+    />
+    <xhtml:link
+      rel="alternate"
       hreflang="he"
       href="http://localhost:1313/multi-author/he/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/multi-author/he/bienvenue/</loc>
+    <lastmod>2025-06-08T01:43:29+01:00</lastmod>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/multi-author/bienvenue/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="http://localhost:1313/multi-author/es/bienvenue/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="http://localhost:1313/multi-author/ar/bienvenue/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fa"
+      href="http://localhost:1313/multi-author/fa/bienvenue/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/multi-author/en/bienvenue/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="he"
+      href="http://localhost:1313/multi-author/he/bienvenue/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/multi-author/he/posts/</loc>
+    <lastmod>2025-06-03T13:54:44+01:00</lastmod>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="http://localhost:1313/multi-author/posts/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="http://localhost:1313/multi-author/ar/posts/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="he"
+      href="http://localhost:1313/multi-author/he/posts/"
     />
   </url>
   <url>
@@ -70,18 +99,8 @@
     />
     <xhtml:link
       rel="alternate"
-      hreflang="es"
-      href="http://localhost:1313/multi-author/es/posts/mon-test/"
-    />
-    <xhtml:link
-      rel="alternate"
       hreflang="ar"
       href="http://localhost:1313/multi-author/ar/posts/mon-test/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="fa"
-      href="http://localhost:1313/multi-author/fa/posts/mon-test/"
     />
     <xhtml:link
       rel="alternate"

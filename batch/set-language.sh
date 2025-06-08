@@ -1,50 +1,49 @@
 #!/bin/bash
 
-# Récupère le répertoire où se trouve ce script
+# 📂 Localise le fichier hugo.toml
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-# Définit le chemin du projet Hugo (on suppose que le script est dans /batch)
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+CONFIG_FILE="$PROJECT_DIR/hugo.toml"
 
-# Chemin du fichier de configuration principal de Hugo
-config_file="$PROJECT_DIR/hugo.toml"
-
-# Fichier temporaire pour écrire la nouvelle configuration
-tmp_file="$PROJECT_DIR/hugo_tmp.toml"
-
-# Vérifie que le fichier hugo.toml existe bien
-if [ ! -f "$config_file" ]; then
-  echo "❌ Fichier introuvable : $config_file"
+if [[ ! -f "$CONFIG_FILE" ]]; then
+  echo "❌ Fichier hugo.toml introuvable dans $PROJECT_DIR"
   exit 1
 fi
 
-# Demande à l'utilisateur de saisir la langue principale (ex : fr)
-read -p "Langue principale (code ISO, ex: fr) : " default_lang
+# 🔤 Demande les langues
+read -p "Code langue principale (ex: fr) : " lang1
+read -p "Nom affiché (ex: Français) pour $lang1 : " name1
+read -p "Poids (ordre d'affichage, ex: 1) pour $lang1 : " weight1
 
-# Demande une seconde langue (ex : en, es, de)
-read -p "Langue secondaire (ex: en, es, de) : " secondary_lang
+read -p "Code langue secondaire (ex: en) : " lang2
+read -p "Nom affiché (ex: English) pour $lang2 : " name2
+read -p "Poids (ordre d'affichage, ex: 2) pour $lang2 : " weight2
 
-# Supprime les lignes existantes qui contiennent 'defaultContentLanguage' ou débutent par '[languages'
-# Cela évite les doublons ou conflits quand on réécrit la configuration
-grep -v 'defaultContentLanguage' "$config_file" | grep -v '^\[languages' > "$tmp_file"
+# ✅ Fonction pour ajouter une langue si elle n'existe pas
+add_lang_block() {
+  local lang="$1"
+  local name="$2"
+  local weight="$3"
 
-# Ajoute les lignes de configuration multilingue dans le fichier temporaire
-cat >> "$tmp_file" <<EOL
+  if grep -q "^\[languages\.$lang\]" "$CONFIG_FILE"; then
+    echo "⚠️ La langue '$lang' existe déjà, rien à faire."
+  else
+    echo -e "\n[languages.$lang]" >> "$CONFIG_FILE"
+    echo "languageName = \"$name\"" >> "$CONFIG_FILE"
+    echo "contentDir = \"content/$lang\"" >> "$CONFIG_FILE"
+    echo "weight = $weight" >> "$CONFIG_FILE"
+    echo "✅ Langue '$lang' ajoutée."
+  fi
+}
 
-defaultContentLanguage = "$default_lang"
+# 🛠️ Ajoute defaultContentLanguage si absent
+if ! grep -q "^defaultContentLanguage" "$CONFIG_FILE"; then
+  echo -e "\ndefaultContentLanguage = \"$lang1\"" >> "$CONFIG_FILE"
+  echo "✅ defaultContentLanguage = \"$lang1\" ajouté."
+fi
 
-[languages]
-  [languages.$default_lang]
-    languageName = "Français"
-    weight = 1
+# 🔁 Ajout des langues
+add_lang_block "$lang1" "$name1" "$weight1"
+add_lang_block "$lang2" "$name2" "$weight2"
 
-  [languages.$secondary_lang]
-    languageName = "English"
-    weight = 2
-EOL
-
-# Remplace l'ancien hugo.toml par la version modifiée
-mv "$tmp_file" "$config_file"
-
-# Message de confirmation
-echo "✅ Configuration multilingue mise à jour dans hugo.toml"
+echo "🎉 Terminé."

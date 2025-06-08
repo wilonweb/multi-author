@@ -1,101 +1,137 @@
-baseURL = "https://wilonweb.github.io/multi-author/"
-title = "ClubCode"
-theme = "blowfish"
-
-defaultContentLanguage = "fr"
-
-[params]
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowPostNavLinks = true
-  disableFingerprinting = true
-  disableSRI = true
-  ShowLanguageSwitcher = true
+baseURL = 'https://wilonweb.github.io/multi-author/'
+defaultContentLanguage = 'fr'
+theme = 'blowfish'
+title = 'ClubCode'
 
 [languages]
-
-  [languages.fr]
-    languageName = "Français"
-    contentDir = "content/fr"
-    weight = 1
-    [languages.fr.params]
-      displayName = "Français"
-      description = "ClubCode : Apprends à coder facilement."
-    [languages.fr.menus]
-      [[languages.fr.menus.main]]
-        name = "Accueil"
-        pageRef = "/"
-        weight = 1
-      [[languages.fr.menus.main]]
-        name = "Articles"
-        pageRef = "/posts/"
-        weight = 2
-
-  [languages.es]
-    languageName = "Español"
-    contentDir = "content/es"
-    weight = 2
-    [languages.es.params]
-      displayName = "Español"
-    [languages.es.menus]
-      [[languages.es.menus.main]]
-        name = "Inicio"
-        pageRef = "/"
-        weight = 1
-      [[languages.es.menus.main]]
-        name = "Artículos"
-        pageRef = "/posts/"
-        weight = 2
-
-  [languages.he]
-    languageName = "עברית"
-    contentDir = "content/he"
-    weight = 3
-    [languages.he.params]
-      displayName = "עברית"
-      rtl = true
-    [languages.he.menus]
-      [[languages.he.menus.main]]
-        name = "דף הבית"
-        pageRef = "/"
-        weight = 1
-      [[languages.he.menus.main]]
-        name = "מאמרים"
-        pageRef = "/posts/"
-        weight = 2
-
   [languages.ar]
-    languageName = "العربية"
-    contentDir = "content/ar"
+    contentDir = 'content/ar'
+    languageName = 'العربية'
     weight = 4
-    [languages.ar.params]
-slogan = "dsdsds"
-      displayName = "العربية"
-      rtl = true
+
     [languages.ar.menus]
       [[languages.ar.menus.main]]
-        name = "الرئيسية"
-        pageRef = "/"
+        name = 'الرئيسية'
+        pageRef = '/'
         weight = 1
+
       [[languages.ar.menus.main]]
-        name = "مقالات"
-        pageRef = "/posts/"
+        name = 'مقالات'
+        pageRef = '/posts/'
         weight = 2
+
+    [languages.ar.params]
+      displayName = 'العربية'
+      rtl = true
+      slogan = 'yyy'
+
+  [languages.en]
+    contentDir = 'content/en'
+    languageName = 'English'
+    weight = 6
+
+    [languages.en.menus]
+      [[languages.en.menus.main]]
+        name = 'Home'
+        pageRef = '/'
+        weight = 1
+
+      [[languages.en.menus.main]]
+        name = 'Posts'
+        pageRef = '/posts/'
+        weight = 2
+
+    [languages.en.params]
+      displayName = 'English'
+      slogan = 'mister'
+
+  [languages.es]
+    contentDir = 'content/es'
+    languageName = 'Español'
+    weight = 2
+
+    [languages.es.menus]
+      [[languages.es.menus.main]]
+        name = 'Inicio'
+        pageRef = '/'
+        weight = 1
+
+      [[languages.es.menus.main]]
+        name = 'Artículos'
+        pageRef = '/posts/'
+        weight = 2
+
+    [languages.es.params]
+      displayName = 'Español'
+      slogan = 'cabron'
 
   [languages.fa]
-    languageName = "فارسی"
-    contentDir = "content/fa"
+    contentDir = 'content/fa'
+    languageName = 'فارسی'
     weight = 5
-    [languages.fa.params]
-      displayName = "فارسی"
-      rtl = true
+
     [languages.fa.menus]
       [[languages.fa.menus.main]]
-        name = "خانه"
-        pageRef = "/"
+        name = 'خانه'
+        pageRef = '/'
         weight = 1
+
       [[languages.fa.menus.main]]
-        name = "مقالات"
-        pageRef = "/posts/"
+        name = 'مقالات'
+        pageRef = '/posts/'
         weight = 2
 
+    [languages.fa.params]
+      displayName = 'فارسی'
+      rtl = true
+      slogan = 'popo'
+
+  [languages.fr]
+    contentDir = 'content/fr'
+    languageName = 'Français'
+    weight = 1
+
+    [languages.fr.menus]
+      [[languages.fr.menus.main]]
+        name = 'Accueil'
+        pageRef = '/'
+        weight = 1
+
+      [[languages.fr.menus.main]]
+        name = 'Articles'
+        pageRef = '/posts/'
+        weight = 2
+
+    [languages.fr.params]
+      description = 'ClubCode : Apprends à coder facilement.'
+      displayName = 'Français'
+      slogan = 'monsieur'
+
+  [languages.he]
+    contentDir = 'content/he'
+    languageName = 'עברית'
+    weight = 3
+
+    [languages.he.menus]
+      [[languages.he.menus.main]]
+        name = 'דף הבית'
+        pageRef = '/'
+        weight = 1
+
+      [[languages.he.menus.main]]
+        name = 'מאמרים'
+        pageRef = '/posts/'
+        weight = 2
+
+    [languages.he.params]
+      displayName = 'עברית'
+      rtl = true
+      slogan = 'jjj'
+
+[params]
+  ShowLanguageSwitcher = true
+  ShowPostNavLinks = true
+  ShowReadingTime = true
+  defaultTheme = 'auto'
+  disableFingerprinting = true
+  disableSRI = true

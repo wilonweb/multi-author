@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 cd "$PROJECT_DIR"
 
-config_file="hugo.toml"
+config_file="$PROJECT_DIR/hugo.toml"
 article_name="bienvenue.md"
 
 # 🌐 Traductions de "Bonjour Wil, tu as réussi."
@@ -26,7 +26,7 @@ messages[tr]="Merhaba Wil, başardın."
 messages[nl]="Hallo Wil, je bent geslaagd."
 
 # 🔎 Récupération des langues depuis hugo.toml
-LANGS=$(grep -E "^\[languages\.[a-z]{2}(-[a-z]{2})?\]" "$config_file" | sed 's/\[languages\.//' | sed 's/\]//')
+LANGS=$(grep -Po '^\s*\[languages\.\K[a-z]{2,3}(?=\])' "$config_file" | sort -u)
 
 echo "🌐 Langues détectées dans hugo.toml : $LANGS"
 echo
@@ -59,4 +59,4 @@ EOF
 done
 
 echo
-echo "🏁 Fichiers bienvenue.md générés avec succès 🎉"
+echo "🏁 Tous les fichiers sont prêts 🎉"

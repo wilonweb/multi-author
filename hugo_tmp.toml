@@ -1,0 +1,164 @@
+baseURL = 'https://wilonweb.github.io/multi-author/'
+theme = 'blowfish'
+title = 'ClubCode'
+
+[languages]
+  [languages.ar]
+    contentDir = 'content/ar'
+    languageName = 'العربية'
+    weight = 4
+
+    [languages.ar.menus]
+      [[languages.ar.menus.main]]
+        name = 'الرئيسية'
+        pageRef = '/'
+        weight = 1
+
+      [[languages.ar.menus.main]]
+        name = 'مقالات'
+        pageRef = '/posts/'
+        weight = 2
+
+    [languages.ar.params]
+      displayName = 'العربية'
+      rtl = true
+      slogan = 'dlf'
+
+  [languages.en]
+    contentDir = 'content/en'
+    languageName = 'English'
+    weight = 6
+
+    [languages.en.menus]
+      [[languages.en.menus.main]]
+        name = 'Home'
+        pageRef = '/'
+        weight = 1
+
+      [[languages.en.menus.main]]
+        name = 'Posts'
+        pageRef = '/posts/'
+        weight = 2
+
+    [languages.en.params]
+      displayName = 'English'
+      slogan = 'how are you'
+
+  [languages.es]
+    contentDir = 'content/es'
+    languageName = 'Español'
+    weight = 2
+
+    [languages.es.menus]
+      [[languages.es.menus.main]]
+        name = 'Inicio'
+        pageRef = '/'
+        weight = 1
+
+      [[languages.es.menus.main]]
+        name = 'Artículos'
+        pageRef = '/posts/'
+        weight = 2
+
+    [languages.es.params]
+      displayName = 'Español'
+      slogan = 'fkodp'
+
+  [languages.fa]
+    contentDir = 'content/fa'
+    languageName = 'فارسی'
+    weight = 5
+
+    [languages.fa.menus]
+      [[languages.fa.menus.main]]
+        name = 'خانه'
+        pageRef = '/'
+        weight = 1
+
+      [[languages.fa.menus.main]]
+        name = 'مقالات'
+        pageRef = '/posts/'
+        weight = 2
+
+    [languages.fa.params]
+      displayName = 'فارسی'
+      rtl = true
+      slogan = 'aa'
+
+  [languages.fr]
+    contentDir = 'content/fr'
+    languageName = 'Français'
+    weight = 1
+
+    [languages.fr.menus]
+      [[languages.fr.menus.main]]
+        name = 'Accueil'
+        pageRef = '/'
+        weight = 1
+
+      [[languages.fr.menus.main]]
+        name = 'Articles'
+        pageRef = '/posts/'
+        weight = 2
+
+    [languages.fr.params]
+      description = 'ClubCode : Apprends à coder facilement.'
+      displayName = 'Français'
+      slogan = 'yo mon poto'
+
+  [languages.he]
+    contentDir = 'content/he'
+    languageName = 'עברית'
+    weight = 3
+
+    [languages.he.menus]
+      [[languages.he.menus.main]]
+        name = 'דף הבית'
+        pageRef = '/'
+        weight = 1
+
+      [[languages.he.menus.main]]
+        name = 'מאמרים'
+        pageRef = '/posts/'
+        weight = 2
+
+    [languages.he.params]
+      displayName = 'עברית'
+      rtl = true
+      slogan = 'eo'
+
+[params]
+  ShowLanguageSwitcher = true
+  ShowPostNavLinks = true
+  ShowReadingTime = true
+  defaultTheme = 'auto'
+  disableFingerprinting = true
+  disableSRI = true
+
+[languages.fr]
+languageName = "Français"
+contentDir = "content/fr"
+weight = 1
+
+[languages.en]
+languageName = "English"
+contentDir = "content/en"
+weight = 2
+
+[languages.fa]
+languageName = "Persian"
+contentDir = "content/fa"
+weight = 4
+[languages.fa.params]
+  displayName = "Persian"
+  rtl = true
+[languages.fa.menus]
+  [[languages.fa.menus.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 1
+  [[languages.fa.menus.main]]
+    name = "Posts"
+    pageRef = "/posts/"
+    weight = 2
+defaultContentLanguage = "fr"

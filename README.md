@@ -31,6 +31,9 @@ But : Crée un article mon-test.md dans chaque langue, dans /posts/.
 Crée également un fichier _index.md avec layout: list si nécessaire
 Sert à tester l'affichage d’articles multi-langue dans Hugo
 
+✅ set-description.sh
+
+
 ✅ set-language.sh
 But : Te permet d’ajouter manuellement une langue principale et une langue secondaire à hugo.toml.
 Supprime les anciennes définitions de langues
@@ -53,6 +56,11 @@ Pose la question "Quel est le titre de ton site ?"
 
 Écrit ce titre proprement dans le fichier
 
+
+✅ setup-slogan.sh
+
+
+
 ✅ setup-multilang.sh
 But : Lance un setup complet en 3 étapes :
 
@@ -61,7 +69,7 @@ Crée les fichiers bienvenue.md avec generate-lang-content.sh
 Crée les articles mon-test.md avec generate-test-articles.sh
 C’est ton script principal pour mettre en place un site multilingue de test fonctionnel.
 
-## Ordre de batvj
+## Ordre de batch
 
 🟡 tout faire d’un coup pour le multi langue
 
@@ -83,10 +91,14 @@ Creation du dossier batch
 pour avoir plein de module en bash pour 
 set title : modifie le titre
 
-
 Pour voir la liste des articles 
 http://localhost:1313/multi-author/fr/posts/
 
+creation du shortcode slogan
+
+Installation de daesel pour faire fonctionner le shortcode slogan 
+cela facilite la manipulationi de donnée JSON, YAML, TOML et XML
+https://github.com/TomWright/dasel
 
 
 

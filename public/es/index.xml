@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bienvenue (es) on ClubCode</title>
+    <title>Accueil on ClubCode</title>
     <link>http://localhost:1313/multi-author/es/</link>
-    <description>Recent content in Bienvenue (es) on ClubCode</description>
+    <description>Recent content in Accueil on ClubCode</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <copyright>© 2025 </copyright>
-    <lastBuildDate>Tue, 03 Jun 2025 13:54:44 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/es/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Jun 2025 02:44:11 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/es/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Mon Test (es)</title>
-      <link>http://localhost:1313/multi-author/es/posts/mon-test/</link>
-      <pubDate>Tue, 03 Jun 2025 13:54:44 +0100</pubDate>
+      <title>Bienvenue (es)</title>
+      <link>http://localhost:1313/multi-author/es/bienvenue/</link>
+      <pubDate>Sun, 08 Jun 2025 02:44:11 +0100</pubDate>
       
-      <guid>http://localhost:1313/multi-author/es/posts/mon-test/</guid>
+      <guid>http://localhost:1313/multi-author/es/bienvenue/</guid>
       <description>&lt;p&gt;Hola Wil, lo lograste.&lt;/p&gt;</description>
       
     </item>

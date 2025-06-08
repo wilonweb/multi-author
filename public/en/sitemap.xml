@@ -4,10 +4,31 @@
 
   <url>
     <loc>http://localhost:1313/multi-author/en/</loc>
+    <lastmod>2025-06-08T02:44:11+01:00</lastmod>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
       href="http://localhost:1313/multi-author/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="http://localhost:1313/multi-author/es/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="he"
+      href="http://localhost:1313/multi-author/he/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="http://localhost:1313/multi-author/ar/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fa"
+      href="http://localhost:1313/multi-author/fa/"
     />
     <xhtml:link
       rel="alternate"
@@ -16,29 +37,37 @@
     />
   </url>
   <url>
-    <loc>http://localhost:1313/multi-author/en/categories/</loc>
+    <loc>http://localhost:1313/multi-author/en/bienvenue/</loc>
+    <lastmod>2025-06-08T02:44:11+01:00</lastmod>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="http://localhost:1313/multi-author/categories/"
+      href="http://localhost:1313/multi-author/bienvenue/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="http://localhost:1313/multi-author/es/bienvenue/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="he"
+      href="http://localhost:1313/multi-author/he/bienvenue/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="ar"
+      href="http://localhost:1313/multi-author/ar/bienvenue/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="fa"
+      href="http://localhost:1313/multi-author/fa/bienvenue/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/multi-author/en/categories/"
-    />
-  </url>
-  <url>
-    <loc>http://localhost:1313/multi-author/en/tags/</loc>
-    <xhtml:link
-      rel="alternate"
-      hreflang="fr"
-      href="http://localhost:1313/multi-author/tags/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/multi-author/en/tags/"
+      href="http://localhost:1313/multi-author/en/bienvenue/"
     />
   </url>
 </urlset>

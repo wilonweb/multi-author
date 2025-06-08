@@ -1,6 +1,5 @@
 ---
-title: "Bienvenue (fa)"
-description: "Page d'accueil en fa"
+title: "Accueil"
 ---
 
 {{< slogan >}}

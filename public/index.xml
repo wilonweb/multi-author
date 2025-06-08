@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     <copyright>© 2025 </copyright>
-    <lastBuildDate>Tue, 03 Jun 2025 13:54:44 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Jun 2025 01:43:29 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bienvenue (fr)</title>
+      <link>http://localhost:1313/multi-author/bienvenue/</link>
+      <pubDate>Sun, 08 Jun 2025 01:43:29 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/bienvenue/</guid>
+      <description>&lt;p&gt;Bonjour Wil, tu as réussi.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Mon Test (fr)</title>
