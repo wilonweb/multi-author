@@ -1,3 +1,8 @@
+---
+title: "Retrogamer mon pot (fr)"
+draft: false
+---
+
 # 📦 No-Intro, Redump, TOSEC et MAME : comprendre les projets de préservation de jeux rétro
 
 Quand on s'intéresse à l'émulation et à la préservation des jeux vidéo rétro, quatre grands projets de référence ressortent : **No-Intro**, **Redump**, **TOSEC** et **MAME**. Chacun a ses objectifs, ses standards de qualité et ses supports préférés.
