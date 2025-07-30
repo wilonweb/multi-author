@@ -1,0 +1,22 @@
+.
+├── add-language.sh
+├── add-languages-multiple.sh
+├── config
+│   ├── _default
+│   │   ├── params.toml
+├── content
+│   ├── _index.md
+├── fix-hugo-toml.sh
+├── fix-lang.sh
+├── generate-lang-content.sh
+├── generate-test-articles.sh
+├── hugo.toml
+├── set-description.sh
+├── set-home-image.sh
+├── set-language-multi.sh
+├── set-language.sh
+├── set-slogan.sh
+├── set-title.sh
+├── setup-index.sh
+├── setup-multilang.sh
+├── structure.txt

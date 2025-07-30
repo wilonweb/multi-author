@@ -38,3 +38,4 @@ BEGIN { insideLanguagesBlock = 0 }
 ' "$BACKUP" > "$FILE"
 
 echo "✅ hugo.toml nettoyé avec succès."
+

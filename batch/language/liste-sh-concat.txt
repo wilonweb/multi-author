@@ -1,0 +1,491 @@
+===== ./add-language.sh =====
+#!/bin/bash
+
+# 📂 Localise le fichier hugo.toml
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+CONFIG_FILE="$PROJECT_DIR/hugo.toml"
+
+if [[ ! -f "$CONFIG_FILE" ]]; then
+  echo "❌ Fichier hugo.toml introuvable dans $PROJECT_DIR"
+  exit 1
+fi
+
+# 🔤 Demande les langues avec nettoyage des inputs
+read -p "Code langue principale (ex: fr) : " lang1
+read -p "Nom affiché (ex: Français) pour $lang1 : " name1
+read -p "Poids (ordre d'affichage, ex: 1) pour $lang1 : " weight1
+weight1=$(echo "$weight1" | tr -cd '[:digit:]')
+
+read -p "Code langue secondaire (ex: en) : " lang2
+read -p "Nom affiché (ex: English) pour $lang2 : " name2
+read -p "Poids (ordre d'affichage, ex: 2) pour $lang2 : " weight2
+weight2=$(echo "$weight2" | tr -cd '[:digit:]')
+
+if [[ -z "$weight1" || -z "$weight2" ]]; then
+  echo "❌ Les poids doivent être des nombres entiers."
+  exit 1
+fi
+
+# ✅ Fonction pour ajouter une langue si elle n'existe pas
+add_lang_block() {
+  local lang="$1"
+  local name="$2"
+  local weight="$3"
+
+  if grep -q "^\[languages\.$lang\]" "$CONFIG_FILE"; then
+    echo "⚠️ La langue '$lang' existe déjà, rien à faire."
+  else
+    echo -e "\n[languages.$lang]" >> "$CONFIG_FILE"
+    echo "languageName = \"$name\"" >> "$CONFIG_FILE"
+    echo "contentDir = \"content/$lang\"" >> "$CONFIG_FILE"
+    echo "weight = $weight" >> "$CONFIG_FILE"
+    echo "[languages.$lang.params]" >> "$CONFIG_FILE"
+    echo "  displayName = \"$name\"" >> "$CONFIG_FILE"
+    echo "[languages.$lang.menus]" >> "$CONFIG_FILE"
+    echo "  [[languages.$lang.menus.main]]" >> "$CONFIG_FILE"
+    echo "    name = \"Home\"" >> "$CONFIG_FILE"
+    echo "    pageRef = \"/\"" >> "$CONFIG_FILE"
+    echo "    weight = 1" >> "$CONFIG_FILE"
+    echo "  [[languages.$lang.menus.main]]" >> "$CONFIG_FILE"
+    echo "    name = \"Posts\"" >> "$CONFIG_FILE"
+    echo "    pageRef = \"/posts/\"" >> "$CONFIG_FILE"
+    echo "    weight = 2" >> "$CONFIG_FILE"
+    echo "✅ Langue '$lang' ajoutée."
+  fi
+}
+
+# 🛠️ Ajoute defaultContentLanguage si absent
+if ! grep -q "^defaultContentLanguage" "$CONFIG_FILE"; then
+  echo -e "\ndefaultContentLanguage = \"$lang1\"" >> "$CONFIG_FILE"
+  echo "✅ defaultContentLanguage = \"$lang1\" ajouté."
+fi
+
+# 🔁 Ajout des langues
+add_lang_block "$lang1" "$name1" "$weight1"
+add_lang_block "$lang2" "$name2" "$weight2"
+
+echo -e "\n🎉 Terminé."
+
+
+===== ./add-languages-multiple.sh =====
+#!/bin/bash
+
+# 📂 Chemins
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+CONFIG_FILE="$PROJECT_DIR/hugo.toml"
+CONTENT_DIR="$PROJECT_DIR/content"
+TMP_FILE="$PROJECT_DIR/hugo_tmp.toml"
+
+# 📜 Langues RTL connues
+RTL_LANGS=("ar" "fa" "he" "ur" "ps" "syr" "dv")
+
+# 🧪 Vérif
+if [[ ! -f "$CONFIG_FILE" ]]; then
+  echo "❌ Fichier introuvable : $CONFIG_FILE"
+  exit 1
+fi
+
+# 🌐 Langue par défaut
+read -p "Langue par défaut (ex: fr) : " default_lang
+# Supprime l'ancienne ligne si elle existe
+grep -v '^defaultContentLanguage' "$CONFIG_FILE" > "$TMP_FILE"
+echo "defaultContentLanguage = \"$default_lang\"" >> "$TMP_FILE"
+
+# Nettoie tous les anciens blocs [languages.xx]
+awk '
+  BEGIN { skip=0 }
+  /^\[languages\.[a-z]{2,3}\]/ { skip=1; next }
+  /^\[languages\..*\]/ { skip=1; next }
+  /^\[.*\]/ { skip=0 }
+  skip==0 { print }
+' "$TMP_FILE" > "$CONFIG_FILE"
+
+echo "✅ defaultContentLanguage = \"$default_lang\" défini et anciens blocs nettoyés."
+
+# 🔁 Ajout de plusieurs langues
+while true; do
+  echo ""
+  read -p "Code langue (ex: en), ENTER pour arrêter : " lang
+  [[ -z "$lang" ]] && break
+
+  read -p "Nom affiché pour $lang : " name
+  read -p "Poids (ordre dans menu) : " weight
+
+  # RTL ?
+  is_rtl=false
+  for rtl_lang in "${RTL_LANGS[@]}"; do
+    [[ "$lang" == "$rtl_lang" ]] && is_rtl=true && break
+  done
+
+  # Ajout du bloc dans hugo.toml
+  {
+    echo ""
+    echo "[languages.$lang]"
+    echo "languageName = \"$name\""
+    echo "contentDir = \"content/$lang\""
+    echo "weight = $weight"
+    echo "[languages.$lang.params]"
+    echo "  displayName = \"$name\""
+    [[ "$is_rtl" == true ]] && echo "  rtl = true"
+    echo "[languages.$lang.menus]"
+    echo "  [[languages.$lang.menus.main]]"
+    echo "    name = \"Home\""
+    echo "    pageRef = \"/\""
+    echo "    weight = 1"
+    echo "  [[languages.$lang.menus.main]]"
+    echo "    name = \"Posts\""
+    echo "    pageRef = \"/posts/\""
+    echo "    weight = 2"
+  } >> "$CONFIG_FILE"
+
+  echo "✅ Langue '$lang' ajoutée avec${is_rtl:+ RTL}."
+
+  # 📁 Création du dossier content/lang + _index.md
+  LANG_DIR="$CONTENT_DIR/$lang"
+  INDEX_FILE="$LANG_DIR/_index.md"
+  mkdir -p "$LANG_DIR"
+  if [[ ! -f "$INDEX_FILE" ]]; then
+    echo -e "---\ntitle: \"Accueil\"\n---\n\n{{< slogan >}}" > "$INDEX_FILE"
+    echo "📄 _index.md créé dans $LANG_DIR"
+  fi
+done
+
+echo ""
+echo "🎉 Toutes les langues sont configurées dans hugo.toml et content/."
+
+
+===== ./generate-lang-content.sh =====
+#!/bin/bash
+
+# 📍 Chemins
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+cd "$PROJECT_DIR"
+
+config_file="$PROJECT_DIR/hugo.toml"
+article_name="bienvenue.md"
+
+# 🌐 Traductions de "Bonjour Wil, tu as réussi."
+declare -A messages
+messages[fr]="Bonjour Wil, tu as réussi."
+messages[en]="Hello Wil, you made it."
+messages[es]="Hola Wil, lo lograste."
+messages[de]="Hallo Wil, du hast es geschafft."
+messages[it]="Ciao Wil, ce l'hai fatta."
+messages[pt]="Olá Wil, você conseguiu."
+messages[ar]="مرحبا ويل، لقد نجحت."
+messages[fa]="سلام ویل، موفق شدی."
+messages[he]="שלום ויל, הצלחת."
+messages[ja]="こんにちはWil、成功しました。"
+messages[zh]="你好Wil，你成功了。"
+messages[ru]="Привет Уил, ты справился."
+messages[tr]="Merhaba Wil, başardın."
+messages[nl]="Hallo Wil, je bent geslaagd."
+
+# 🔎 Récupération des langues depuis hugo.toml
+LANGS=$(grep -Po '^\s*\[languages\.\K[a-z]{2,3}(?=\])' "$config_file" | sort -u)
+
+echo "🌐 Langues détectées dans hugo.toml : $LANGS"
+echo
+
+# 📝 Création des fichiers
+for lang in $LANGS; do
+  filepath="content/$lang/$article_name"
+  message="${messages[$lang]}"
+
+  # Utilise l'anglais par défaut si la langue est absente
+  if [ -z "$message" ]; then
+    message="Hello Wil, you made it. ([$lang])"
+  fi
+
+  if [ ! -f "$filepath" ]; then
+    mkdir -p "$(dirname "$filepath")"
+    cat > "$filepath" <<EOF
+---
+title: "Bienvenue (${lang})"
+date: $(date -Iseconds)
+draft: false
+---
+
+$message
+EOF
+    echo "✅ Créé : $filepath"
+  else
+    echo "⚠️ Existe déjà : $filepath"
+  fi
+done
+
+echo
+echo "🏁 Tous les fichiers sont prêts 🎉"
+
+
+===== ./generate-test-articles.sh =====
+#!/bin/bash
+
+# 📍 Répertoire du projet Hugo
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+cd "$PROJECT_DIR"
+
+config_file="hugo.toml"
+article_name="mon-test.md"
+
+# 🌐 Traductions de base
+declare -A messages
+messages[fr]="Bonjour Wil, tu as réussi."
+messages[en]="Hello Wil, you made it."
+messages[es]="Hola Wil, lo lograste."
+messages[de]="Hallo Wil, du hast es geschafft."
+messages[it]="Ciao Wil, ce l'hai fatta."
+messages[pt]="Olá Wil, você conseguiu."
+messages[ar]="مرحبا ويل، لقد نجحت."
+messages[fa]="سلام ویل، موفق شدی."
+messages[he]="שלום ויל, הצלחת."
+messages[ja]="こんにちはWil、成功しました。"
+messages[zh]="你好Wil，你成功了。"
+messages[ru]="Привет Уил, ты справился."
+messages[tr]="Merhaba Wil, başardın."
+messages[nl]="Hallo Wil, je bent geslaagd."
+
+# 🔍 Extraction des langues depuis hugo.toml
+LANGS=$(grep -oP '\[languages\.\K[a-z]{2}(-[a-z]{2})?' "$config_file")
+
+echo "🌍 Langues détectées dans hugo.toml : $LANGS"
+echo
+
+for lang in $LANGS; do
+  folder="content/$lang/posts"
+  filepath="$folder/$article_name"
+  message="${messages[$lang]}"
+
+  # Fallback si pas de traduction
+  if [ -z "$message" ]; then
+    message="Hello Wil, you made it. ([$lang])"
+  fi
+
+  # Crée le _index.md si absent
+  index_file="$folder/_index.md"
+  if [ ! -f "$index_file" ]; then
+    mkdir -p "$folder"
+    echo -e "---\ntitle: \"Articles\"\nlayout: list\n---" > "$index_file"
+    echo "✅ _index.md créé : $index_file"
+  fi
+
+  # Crée l'article s'il n'existe pas
+  if [ ! -f "$filepath" ]; then
+    mkdir -p "$folder"
+    cat > "$filepath" <<EOF
+---
+title: "Mon Test (${lang})"
+date: $(date -Iseconds)
+draft: false
+---
+
+$message
+EOF
+    echo "✅ Article généré : $filepath"
+  else
+    echo "⚠️ Article déjà présent : $filepath"
+  fi
+done
+
+echo
+echo "🏁 Tous les fichiers sont prêts à s'afficher dans /<lang>/posts/"
+
+
+===== ./set-language-multi.sh =====
+#!/bin/bash
+
+# 📍 Positionne les chemins du projet
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+config_file="$PROJECT_DIR/hugo.toml"
+tmp_file="$PROJECT_DIR/hugo_tmp.toml"
+
+# 📎 Vérifie que le fichier de configuration existe
+if [ ! -f "$config_file" ]; then
+  echo "❌ Fichier introuvable : $config_file"
+  exit 1
+fi
+
+# 🧹 Nettoie l'ancien config.toml (en retirant les anciens blocs multilingues)
+grep -v 'defaultContentLanguage' "$config_file" \
+  | grep -v '^\[languages' \
+  | grep -v '^  \[languages\.' \
+  > "$tmp_file"
+
+# ✏️ Ajoute la nouvelle configuration multilingue
+cat >> "$tmp_file" <<'EOL'
+
+defaultContentLanguage = "fr"
+
+[languages]
+
+  [languages.fr]
+    languageName = "Français"
+    contentDir = "content/fr"
+    weight = 1
+    [languages.fr.params]
+      displayName = "Français"
+    [languages.fr.menus]
+      [[languages.fr.menus.main]]
+        name = "Accueil"
+        pageRef = "/"
+        weight = 1
+      [[languages.fr.menus.main]]
+        name = "Articles"
+        pageRef = "/posts/"
+        weight = 2
+
+  [languages.es]
+    languageName = "Español"
+    contentDir = "content/es"
+    weight = 2
+    [languages.es.params]
+      displayName = "Español"
+    [languages.es.menus]
+      [[languages.es.menus.main]]
+        name = "Inicio"
+        pageRef = "/"
+        weight = 1
+      [[languages.es.menus.main]]
+        name = "Artículos"
+        pageRef = "/posts/"
+        weight = 2
+
+  [languages.he]
+    languageName = "עברית"
+    contentDir = "content/he"
+    weight = 3
+    [languages.he.params]
+      displayName = "עברית"
+      rtl = true
+    [languages.he.menus]
+      [[languages.he.menus.main]]
+        name = "דף הבית"
+        pageRef = "/"
+        weight = 1
+      [[languages.he.menus.main]]
+        name = "מאמרים"
+        pageRef = "/posts/"
+        weight = 2
+
+  [languages.ar]
+    languageName = "العربية"
+    contentDir = "content/ar"
+    weight = 4
+    [languages.ar.params]
+      displayName = "العربية"
+      rtl = true
+    [languages.ar.menus]
+      [[languages.ar.menus.main]]
+        name = "الرئيسية"
+        pageRef = "/"
+        weight = 1
+      [[languages.ar.menus.main]]
+        name = "مقالات"
+        pageRef = "/posts/"
+        weight = 2
+
+  [languages.fa]
+    languageName = "فارسی"
+    contentDir = "content/fa"
+    weight = 5
+    [languages.fa.params]
+      displayName = "فارسی"
+      rtl = true
+    [languages.fa.menus]
+      [[languages.fa.menus.main]]
+        name = "خانه"
+        pageRef = "/"
+        weight = 1
+      [[languages.fa.menus.main]]
+        name = "مقالات"
+        pageRef = "/posts/"
+        weight = 2
+EOL
+
+# 💾 Remplace le fichier hugo.toml par le nouveau
+mv "$tmp_file" "$config_file"
+
+echo "✅ Fichier hugo.toml mis à jour avec menus, displayName et paramètres multilingues complets."
+
+
+===== ./set-language.sh =====
+#!/bin/bash
+
+# 📂 Localise le fichier hugo.toml
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+CONFIG_FILE="$PROJECT_DIR/hugo.toml"
+
+if [[ ! -f "$CONFIG_FILE" ]]; then
+  echo "❌ Fichier hugo.toml introuvable dans $PROJECT_DIR"
+  exit 1
+fi
+
+# 🔤 Demande les langues
+read -p "Code langue principale (ex: fr) : " lang1
+read -p "Nom affiché (ex: Français) pour $lang1 : " name1
+read -p "Poids (ordre d'affichage, ex: 1) pour $lang1 : " weight1
+
+read -p "Code langue secondaire (ex: en) : " lang2
+read -p "Nom affiché (ex: English) pour $lang2 : " name2
+read -p "Poids (ordre d'affichage, ex: 2) pour $lang2 : " weight2
+
+# ✅ Fonction pour ajouter une langue si elle n'existe pas
+add_lang_block() {
+  local lang="$1"
+  local name="$2"
+  local weight="$3"
+
+  if grep -q "^\[languages\.$lang\]" "$CONFIG_FILE"; then
+    echo "⚠️ La langue '$lang' existe déjà, rien à faire."
+  else
+    echo -e "\n[languages.$lang]" >> "$CONFIG_FILE"
+    echo "languageName = \"$name\"" >> "$CONFIG_FILE"
+    echo "contentDir = \"content/$lang\"" >> "$CONFIG_FILE"
+    echo "weight = $weight" >> "$CONFIG_FILE"
+    echo "✅ Langue '$lang' ajoutée."
+  fi
+}
+
+# 🛠️ Ajoute defaultContentLanguage si absent
+if ! grep -q "^defaultContentLanguage" "$CONFIG_FILE"; then
+  echo -e "\ndefaultContentLanguage = \"$lang1\"" >> "$CONFIG_FILE"
+  echo "✅ defaultContentLanguage = \"$lang1\" ajouté."
+fi
+
+# 🔁 Ajout des langues
+add_lang_block "$lang1" "$name1" "$weight1"
+add_lang_block "$lang2" "$name2" "$weight2"
+
+echo "🎉 Terminé."
+
+
+===== ./setup-multilang.sh =====
+#!/bin/bash
+
+# 📍 Répertoire du script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+cd "$PROJECT_DIR"
+
+# 1. Définir les langues dans hugo.toml
+echo "🔧 Étape 1 : Configuration multilingue"
+"$SCRIPT_DIR/set-language-multi.sh" || { echo "❌ Erreur set-language-multi.sh"; exit 1; }
+
+# 2. Générer les fichiers bienvenue.md
+echo "📝 Étape 2 : Génération des messages de bienvenue"
+"$SCRIPT_DIR/generate-lang-content.sh" || { echo "❌ Erreur generate-lang-content.sh"; exit 1; }
+
+# 3. Générer les articles de test
+echo "📰 Étape 3 : Génération des articles de test"
+"$SCRIPT_DIR/generate-test-articles.sh" || { echo "❌ Erreur generate-test-articles.sh"; exit 1; }
+
+echo ""
+echo "✅ Setup terminé. Lance 'hugo server -D' pour tester ton site."
+
+
