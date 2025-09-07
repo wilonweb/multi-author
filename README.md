@@ -8,6 +8,12 @@ On vas prendre pour exemple Les pilotes de l'IT
 
 ---
 
+## Installation 
+git clone http://....repo
+git submodule update --init --recursive
+
+
+
 ## Les commande sympa
 cat batch/*.sh : Affiche le contenue des batch
 

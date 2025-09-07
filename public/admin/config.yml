@@ -1,0 +1,29 @@
+local_backend: true
+
+backend:
+  name: github
+  repo: wilonweb/multi-author
+  branch: main
+
+site_url: "http://localhost:1313/multi-author/"
+media_folder: "static/uploads"
+public_folder: "/multi-author/uploads"
+
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "posts_fr"
+    label: "Articles (FR)"
+    folder: "content/fr/posts"
+    create: true
+    slug: "{{slug}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { name: "title", label: "Titre", widget: "string" }
+      - { name: "date",  label: "Date",  widget: "datetime" }
+      - { name: "draft", label: "Brouillon", widget: "boolean", default: false }
+      - { name: "tags",  label: "Tags",  widget: "list", required: false }
+      - { name: "description", label: "Description", widget: "text", required: false }
+      - { name: "authors", label: "Auteurs", widget: "list", required: false }
+      - { name: "body",  label: "Contenu", widget: "markdown" }

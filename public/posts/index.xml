@@ -10,12 +10,43 @@
     <lastBuildDate>Tue, 03 Jun 2025 13:54:44 +0100</lastBuildDate><atom:link href="http://localhost:1313/multi-author/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Mon Article (fr)</title>
+      <link>http://localhost:1313/multi-author/posts/mon-article/</link>
+      <pubDate>Tue, 03 Jun 2025 13:54:44 +0100</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/posts/mon-article/</guid>
+      <description>&lt;p&gt;Bonjour Wil, tu es auteur&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Mon Test (fr)</title>
       <link>http://localhost:1313/multi-author/posts/mon-test/</link>
       <pubDate>Tue, 03 Jun 2025 13:54:44 +0100</pubDate>
       
       <guid>http://localhost:1313/multi-author/posts/mon-test/</guid>
       <description>&lt;p&gt;Bonjour Wil, tu as réussi.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Retrogamer mon pot (fr)</title>
+      <link>http://localhost:1313/multi-author/posts/retrogamer2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/multi-author/posts/retrogamer2/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;📦 No-Intro, Redump, TOSEC et MAME : comprendre les projets de préservation de jeux rétro 
+    &lt;div id=&#34;-no-intro-redump-tosec-et-mame--comprendre-les-projets-de-pr%C3%A9servation-de-jeux-r%C3%A9tro&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700&#34;
+            style=&#34;text-decoration-line: none !important;&#34; href=&#34;#-no-intro-redump-tosec-et-mame--comprendre-les-projets-de-pr%C3%A9servation-de-jeux-r%C3%A9tro&#34; aria-label=&#34;Ancre&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h1&gt;
+&lt;p&gt;Quand on s&amp;rsquo;intéresse à l&amp;rsquo;émulation et à la préservation des jeux vidéo rétro, quatre grands projets de référence ressortent : &lt;strong&gt;No-Intro&lt;/strong&gt;, &lt;strong&gt;Redump&lt;/strong&gt;, &lt;strong&gt;TOSEC&lt;/strong&gt; et &lt;strong&gt;MAME&lt;/strong&gt;. Chacun a ses objectifs, ses standards de qualité et ses supports préférés.&lt;/p&gt;
+&lt;p&gt;Ce guide résume les différences entre ces projets pour t’aider à constituer une collection propre et cohérente.&lt;/p&gt;</description>
       
     </item>
     
