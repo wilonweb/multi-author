@@ -8,6 +8,15 @@ On vas prendre pour exemple Les pilotes de l'IT
 
 ---
 
+## Utilisation 
+En local 
+`hugo server `
+`npx decap-server`
+
+
+
+---
+
 ## Installation 
 git clone http://....repo
 git submodule update --init --recursive
