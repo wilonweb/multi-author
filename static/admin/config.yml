@@ -1,15 +1,14 @@
+site_url: "https://wilonweb.github.io/multi-author/"
+publish_mode: editorial_workflow
+
 backend:
   name: github
-  repo: wilonweb/multi-author
+  repo: "wilonweb/multi-author"
   branch: main
-  base_url: "https://decap-proxy.wilonweb.workers.dev"  # ← ton Worker Cloudflare
-
-site_url: "https://wilonweb.github.io/multi-author/"
+  base_url: "https://decap-proxy.wilonweb.workers.dev"  # <— ton Worker Cloudflare
 
 media_folder: "static/uploads"
 public_folder: "/multi-author/uploads"
-
-publish_mode: editorial_workflow
 
 collections:
   - name: "posts_fr"
@@ -17,11 +16,11 @@ collections:
     folder: "content/fr/posts"
     create: true
     slug: "{{slug}}"
-    sortable_fields: ["date", "title"]
     fields:
       - { name: "title", label: "Titre", widget: "string" }
-      - { name: "date",  label: "Date",  widget: "datetime" }
+      - { name: "date", label: "Date", widget: "datetime" }
       - { name: "draft", label: "Brouillon", widget: "boolean", default: false }
-      - { name: "tags",  label: "Tags",  widget: "list", required: false }
+      - { name: "tags", label: "Tags", widget: "list", required: false }
       - { name: "description", label: "Description", widget: "text", required: false }
-      - { name: "authors", label: "Auteurs", wi
+      - { name: "authors", label: "Auteurs", widget: "list", required: false }
+      - { name: "body", label: "Contenu", widget: "markdown" }
