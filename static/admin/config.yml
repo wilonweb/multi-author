@@ -3,6 +3,8 @@ backend:
   repo: wilonweb/multi-author
   branch: main
   base_url: "https://decap-proxy.wilonweb.workers.dev"
+  auth_endpoint: "auth"          # explicite, même si c'est la valeur par défaut pour GitHub
+  site_domain: "wilonweb.github.io"  # aide Decap à taguer le site_id correctement
 
 site_url: "https://wilonweb.github.io/multi-author/"
 
@@ -17,38 +19,12 @@ collections:
     folder: "content/fr/posts"
     create: true
     slug: "{{slug}}"
-    sortable_fields:
-      - date
-      - title
+    sortable_fields: ["date", "title"]
     fields:
-      - name: "title"
-        label: "Titre"
-        widget: "string"
-
-      - name: "date"
-        label: "Date"
-        widget: "datetime"
-
-      - name: "draft"
-        label: "Brouillon"
-        widget: "boolean"
-        default: false
-
-      - name: "tags"
-        label: "Tags"
-        widget: "list"
-        required: false
-
-      - name: "description"
-        label: "Description"
-        widget: "text"
-        required: false
-
-      - name: "authors"
-        label: "Auteurs"
-        widget: "list"
-        required: false
-
-      - name: "body"
-        label: "Contenu"
-        widget: "markdown"
+      - { name: title, label: "Titre", widget: string }
+      - { name: date,  label: "Date",  widget: datetime }
+      - { name: draft, label: "Brouillon", widget: boolean, default: false }
+      - { name: tags,  label: "Tags",  widget: list, required: false }
+      - { name: description, label: "Description", widget: text, required: false }
+      - { name: authors, label: "Auteurs", widget: list, required: false }
+      - { name: body,  label: "Contenu", widget: markdown }
